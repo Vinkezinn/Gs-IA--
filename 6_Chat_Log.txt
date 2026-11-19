@@ -1,0 +1,27 @@
+REGISTRO DE USO DE IA — GS 2026.2 (Kevin Rodrigues de Melo — RM571777 — turma 1CCPG)
+
+Ferramenta: Claude (Anthropic), via chat.
+
+USO DECLARADO (seção 9 do briefing)
+Permitido, feito com a IA e revisado/executado por mim:
+- Rascunho do notebook (pipeline LCEL, tools do agente, guardrails, Gradio, código do RAGAS).
+- Rascunho dos 3 documentos da base documental (município fictício de Vila Serena), revisados por mim.
+- Estrutura do README e dos arquivos de entrega; script de conferência/empacotamento do zip.
+- Diagnóstico de erros de execução (erro 402 da nuvem do Ollama -> troca para Ollama local no Colab).
+- Rascunho dos textos de justificativa do chunking, explicação do RAGAS e conclusão, a partir dos números reais medidos; revisados por mim.
+
+Feito por mim (não pedido à IA):
+- Ground truth das 6 perguntas de avaliação (escrito por mim; a IA só indicou em que parte dos documentos conferir).
+- Execução do RAGAS no Colab e coleta dos números (nenhum resultado foi inventado pela IA).
+- Escolha do chunking (500/80), prints, vídeo e envio.
+
+RESUMO DA CONVERSA (ordem cronológica)
+1. Enviei o briefing e o zip do projeto e perguntei o que faltava. A IA fez o levantamento: ground truth vazio, turma, execução no Colab, textos de justificativa, JSON do RAGAS, README, prints, vídeo, chat log e envio.
+2. Pedi que a IA fizesse tudo o que fosse possível. Ela conferiu a sintaxe do notebook, criou um script de conferência/empacotamento do zip, uma lista do que só eu podia fazer e um guia de onde conferir cada pergunta nos documentos, e recusou escrever o ground truth (regra da seção 9).
+3. Enviei um print da tela de chave de API do Ollama; a IA avisou que a chave ficou exposta, recomendou revogar e gerar outra, e que a chave não pode aparecer em arquivos da entrega.
+4. O notebook falhou com erro 402 (conta do Ollama sem saldo/cota). Mostrei o painel (saldo R$ 0). A IA adaptou o notebook para rodar o modelo localmente no Colab (qwen2.5:7b, GPU T4), com a flag USAR_NUVEM para voltar à nuvem.
+5. Ajudei-me com o Colab (tipo de ambiente de execução GPU, tempo de instalação, aviso de pydantic) e com o erro esperado da célula de ground truth vazio.
+6. Recebi da IA os trechos dos documentos de cada pergunta, escrevi os ground truths e rodei o RAGAS. A IA calculou as médias a partir da tabela, sugeriu diagnóstico e rascunhou os textos; depois, com o JSON em mãos, corrigiu o primeiro rascunho (a Portaria estava no contexto; o erro era do modelo) e apontou que os ground truths das perguntas 4 e 6 divergem dos documentos.
+7. Decidi seguir direto para vídeo e entrega; a IA preparou o roteiro do vídeo, a lista de prints e a versão final dos arquivos.
+
+NOTA: nenhuma chave de API consta neste registro nem nos arquivos da entrega.
